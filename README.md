@@ -1,11 +1,10 @@
 # parabolaGui
-This is a test repository for drawing parabulas in python.
+This is a test repository for drawing parabolas in python.
 
-This is a GUI interface for drawing a parabula.
-This GUI was cheak't on linux debian but it shuld work fine windows or MAC.
+This is a GUI interface for drawing a parabola.
 
 -----------------FOR INSTALATION-----------------
-In the ParabulaGui directori enter the folowing command for your OS.
+In the ParabolaGui directori enter the folowing command for your OS.
 
 linux:
 	sudo python setup.py install
