@@ -29,6 +29,8 @@ class MyFrame(wx.Frame):
         self.text_ctrl_5 = wx.TextCtrl(self, wx.ID_ANY, "50")
         self.label_5 = wx.StaticText(self, wx.ID_ANY, ("   y limet ="))
         self.text_ctrl_6 = wx.TextCtrl(self, wx.ID_ANY, "50")
+        self.label_6 = wx.StaticText(self, wx.ID_ANY, " points distence")
+        self.text_ctrl_7 = wx.TextCtrl(self, wx.ID_ANY, "0.5")	
         self.button_1 = wx.Button(self, wx.ID_ANY, ("ok"))
 
         self.__set_properties()
@@ -39,6 +41,7 @@ class MyFrame(wx.Frame):
         self.Bind(wx.EVT_TEXT_ENTER, self.InsertC, self.text_ctrl_4)
         self.Bind(wx.EVT_TEXT_ENTER, self.xLimet, self.text_ctrl_5)
 	self.Bind(wx.EVT_TEXT_ENTER, self.yLimet, self.text_ctrl_6)
+        self.Bind(wx.EVT_TEXT_ENTER, self.pointsDiference, self.text_ctrl_7)
         self.Bind(wx.EVT_BUTTON, self.OpenParabula, self.button_1)
         # end wxGlade
 
@@ -50,7 +53,7 @@ class MyFrame(wx.Frame):
     def __do_layout(self):
         # begin wxGlade: MyFrame.__do_layout
         sizer_1 = wx.BoxSizer(wx.VERTICAL)
-        grid_sizer_1 = wx.GridSizer(6, 2, 0, 0)
+        grid_sizer_1 = wx.GridSizer(7, 2, 0, 0)
         grid_sizer_1.Add(self.label_1, 0, 0, 0)
         grid_sizer_1.Add(self.text_ctrl_2, 0, 0, 0)
         grid_sizer_1.Add(self.label_2, 0, 0, 0)
@@ -61,6 +64,8 @@ class MyFrame(wx.Frame):
 	grid_sizer_1.Add(self.text_ctrl_5, 0, 0, 0)
         grid_sizer_1.Add(self.label_5, 0, 0, 0)
 	grid_sizer_1.Add(self.text_ctrl_6, 0, 0, 0)
+        grid_sizer_1.Add(self.label_6, 0, 0, 0)
+        grid_sizer_1.Add(self.text_ctrl_7, 0, 0, 0)
         grid_sizer_1.Add(self.button_1, 0, 0, 1)
         sizer_1.Add(grid_sizer_1, 1, wx.EXPAND, 0)
         self.SetSizer(sizer_1)
@@ -85,6 +90,10 @@ class MyFrame(wx.Frame):
         event.Skip()
 
     def yLimet(self, event):
+	print "Event handler 'yLimet' not implemented!"
+        event.Skip()
+    
+    def pointsDiference(self, event):
 	print "Event handler 'yLimet' not implemented!"
         event.Skip()
 
