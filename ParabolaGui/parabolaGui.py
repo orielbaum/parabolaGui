@@ -42,6 +42,7 @@ class CalcParabula(app.MyFrame):
 		plt.plot(range(-self.num, self.num+1), parabula(self.InsertA(1), self.InsertB(1), self.InsertC(1)))
 		plt.xlim(-self.xLimet(1), self.xLimet(1))
 		plt.ylim(-self.yLimet(1), self.yLimet(1))
+		plt.grid(True)
 		plt.show()
 
 myapp = wx.App(False)
